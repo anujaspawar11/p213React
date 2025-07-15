@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Calculate" id="C" readonly><br><br>
+    <button onclick="put(1)">1</button>
+    <button onclick="put(2)">2</button>
+    <button onclick="put(3)">3</button><br><br>
+    <button onclick="put(4)">4</button>
+    <button onclick="put(5)">5</button>
+    <button onclick="put(6)">6</button><br><br>
+    <button onclick="put(7)">7</button>
+    <button onclick="put(8)">8</button>
+    <button onclick="put(9)">9</button><br><br>
+    <button onclick="put(`+`)">+</button>
+    <button onclick="put(`-`)">-</button>
+    <button onclick="put(`/`)">/</button><br><br>
+    <button onclick="put(`*`)">*</button>
+    <button onclick="put(`%`)">%</button>
+    <button onclick="put(`.`)">.</button><br><br>
+    <button onclick="ans()">=</button>
+    <button onclick="C()">Clear</button>
+    <button onclick="X()">X</button>
+
+
+
+    <script>
+     var v = document.getElementById("C");
+     function put(a){
+         v.value = v.value + a ;
+
+     }
+     function ans(){
+        v.value = eval(v.value)
+     }
+     function C(){
+       v.value = "";
+     }
+     function X(){
+        v.value = v.value.substring(0,v.value.length-1)
+     }
+    </script>
+</body>
+</html>
